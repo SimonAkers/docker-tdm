@@ -4,6 +4,9 @@ This allows the application to be deployed in a headless environment while
 still being configured through the GUI on a remote device with a VNC viewer.
 
 ## Usage
+Clone:
+`git clone https://github.com/SimonAkers/docker-tdm.git`
+
 Build:
 `docker compose build`
 
