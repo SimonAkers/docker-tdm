@@ -1,7 +1,7 @@
 # docker-tdm
 A docker image that runs [TwitchDropsMiner](https://github.com/DevilXD/TwitchDropsMiner) in a container with a VNC server.
 This allows the application to be deployed in a headless environment while
-still being configured through the GUI on a remote device with a VNC viewer.
+still being configured through the GUI on a remote device by using a VNC viewer.
 
 ## Usage
 Clone:
