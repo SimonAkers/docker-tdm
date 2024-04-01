@@ -1,0 +1,23 @@
+volumes:
+    repo:
+
+services:
+    app:
+        stdin_open: true # -i
+        tty: true        # -t
+        
+        ports:
+            - 5900:5900
+
+        build: .
+        
+        volumes:
+            - repo:/app/TwitchDropsMiner/
+            - ./:/app/host/
+        
+        command: bash ./host/docker-init.sh
+
+        environment:
+            - VNCPASS=letmein           
+
+
