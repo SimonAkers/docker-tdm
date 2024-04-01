@@ -28,6 +28,8 @@ Stop:
 ## Notes
 - By default, the VNC server has the password set to `letmein`. You can change this in the `compose.yml` file.
 
+- The VNC server should be compatible with any standard VNC viewer. I used [TightVNC](https://www.tightvnc.com/) while making this.
+
 - At the moment, this container is NOT intended to have its ports exposed to the Internet.
 It was not designed using rigorous security practices and I am using a plain-text password for the VNC server.
 USE AT YOUR OWN RISK!
