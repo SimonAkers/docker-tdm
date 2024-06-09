@@ -7,9 +7,6 @@ export DISPLAY=:19
 
 Xvfb $DISPLAY -screen 0 1024x768x16 &
 
-#fluxbox &
-startx icewm-session
-
 x11vnc -passwd $VNCPASS -display $DISPLAY -bg -forever -quiet
 
 python3 ./TwitchDropsMiner/main.py
