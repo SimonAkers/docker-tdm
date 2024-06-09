@@ -16,6 +16,15 @@ Start:
 Stop:
 `docker compose down`
 
+## Environment Variables
+These variables are used in the container's build and run processes, located in the `.env` file.
+- `VNCPASS` *(run)* - The password for the VNC server.
+    - **Default:** `letmein`
+- `TDM_REPO` *(build, run)* - The miner repository to use.
+    - **Default:** `https://github.com/DevilXD/TwitchDropsMiner`
+    - This is helpful if a forked version of the miner has implemented a critical patch before the main version.
+    - It is recommended to use the main repository if possible, as forks are not guaranteed to work without modification to the image settings.
+
 ## Components
 `Ubuntu 22.04`
 `python3`
@@ -26,11 +35,9 @@ Stop:
 `TwitchDropsMiner`
 
 ## Notes
-- By default, the VNC server has the password set to `letmein`. You can change this in the `compose.yml` file.
-
 - The VNC server should be compatible with any standard VNC viewer. I used [TightVNC](https://www.tightvnc.com/) while making this.
 
-- At the moment, this container is NOT intended to have its ports exposed to the Internet.
+- This container is NOT intended to have its ports exposed to the Internet.
 It was not designed using rigorous security practices and I am using a plain-text password for the VNC server.
 USE AT YOUR OWN RISK!
 
