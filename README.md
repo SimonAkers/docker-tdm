@@ -17,7 +17,7 @@ Stop:
 `docker compose down`
 
 ## Components
-`Ubuntu 24.04`
+`Ubuntu 22.04`
 `python3`
 `pip3`
 `x11vnc`
