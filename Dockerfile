@@ -19,7 +19,8 @@ RUN apt install x11vnc xvfb -y
 ARG TDM_REPO
 ENV TDM_REPO $TDM_REPO
 
-RUN git -C TwitchDropsMiner pull || git clone $TDM_REPO TwitchDropsMiner
+RUN rm -rf TwitchDropsMiner
+RUN git clone $TDM_REPO TwitchDropsMiner
 
 # For debug purposes
 RUN pip3 list
