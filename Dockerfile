@@ -15,9 +15,13 @@ RUN apt install gir1.2-appindicator3-0.1 -y
 RUN apt install git -y
 RUN apt install x11vnc xvfb -y
 
-RUN git -C TwitchDropsMiner pull || git clone https://github.com/DevilXD/TwitchDropsMiner.git
+# Repo URL
+ARG TDM_REPO
+ENV TDM_REPO $TDM_REPO
 
-# for debug purposes
+RUN git -C TwitchDropsMiner pull || git clone $TDM_REPO TwitchDropsMiner
+
+# For debug purposes
 RUN pip3 list
 
 RUN pip3 install -r TwitchDropsMiner/requirements.txt

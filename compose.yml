@@ -9,7 +9,11 @@ services:
         ports:
             - 5900:5900
 
-        build: .
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                TDM_REPO:
         
         volumes:
             - repo:/app/TwitchDropsMiner/
@@ -18,6 +22,7 @@ services:
         command: bash ./host/docker-init.sh
 
         environment:
-            - VNCPASS=letmein           
+            VNCPASS:
+            TDM_REPO:
 
 
