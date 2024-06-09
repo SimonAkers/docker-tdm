@@ -42,5 +42,8 @@ These variables are used in the container's build and run processes, located in 
 It was not designed using rigorous security practices and I am using a plain-text password for the VNC server.
 USE AT YOUR OWN RISK!
 
+- **ALL ISSUES SHOULD BE REPORTED HERE FIRST.** Docker usage is not supported by the TDM maintainers, so any issues when using this container should go
+through this repository first. If it turns out to be an issue with TDM itself, then we can proceed to move the issue to that repository.
+
 ## Known Issues
-- After connecting to the VNC server, clicking the "Minimize to Tray" button causes the window to entirely disappear, even if you were to use a window manager and system tray. Restarting the container should restore the window.
+- After connecting to the VNC server, clicking the "Minimize to Tray" button causes the window to entirely disappear, even if you were to use a window manager and system tray. Restarting the container should restore the window. I have not yet found a way around this.
