@@ -24,6 +24,7 @@ These variables are used in the container's build and run processes, located in 
     - **Default:** `https://github.com/DevilXD/TwitchDropsMiner`
     - This is helpful if a forked version of the miner has implemented a critical patch before the main version.
     - It is recommended to use the main repository if possible, as forks are not guaranteed to work without modification to the image settings.
+    - You must delete the existing repository and/or image for a new one to be cloned. It is recommend to build and deploy from scratch if changing repo.
 
 ## Components
 `Ubuntu 22.04`
