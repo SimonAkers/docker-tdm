@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-rm -rf TwitchDropsMiner
-git clone $TDM_REPO TwitchDropsMiner
+git -C TwitchDropsMiner pull || git clone $TDM_REPO TwitchDropsMiner
 
 rm -f /tmp/X19.lock
 export DISPLAY=:19
