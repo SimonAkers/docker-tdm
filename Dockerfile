@@ -14,6 +14,8 @@ RUN apt install gir1.2-gtk-3.0 -y
 RUN apt install gir1.2-appindicator3-0.1 -y
 RUN apt install git -y
 RUN apt install x11vnc xvfb -y
+RUN apt install fluxbox -y
+RUN apt install x11-xserver-utils -y
 
 # Repo URL
 ARG TDM_REPO
@@ -25,3 +27,4 @@ RUN git -C TwitchDropsMiner pull || git clone $TDM_REPO TwitchDropsMiner
 RUN pip3 list
 
 RUN pip3 install -r TwitchDropsMiner/requirements.txt
+ENTRYPOINT ["./host/docker-init.sh"]

@@ -3,12 +3,15 @@ volumes:
 
 services:
     app:
+        container_name: docker-tdm
+        restart: always
         stdin_open: true # -i
         tty: true        # -t
         
         ports:
             - 5900:5900
-
+        
+        image: shayes/docker-tdm
         build:
             context: .
             dockerfile: Dockerfile
@@ -19,7 +22,7 @@ services:
             - repo:/app/TwitchDropsMiner/
             - ./:/app/host/
         
-        command: bash ./host/docker-init.sh
+        #command: bash ./host/docker-init.sh
 
         environment:
             VNCPASS:
