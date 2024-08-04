@@ -16,6 +16,7 @@ RUN apt install git -y
 RUN apt install x11vnc xvfb -y
 RUN apt install fluxbox -y
 RUN apt install x11-xserver-utils -y
+RUN apt install xdotool wmctrl -y
 
 # Repo URL
 ARG TDM_REPO
@@ -27,4 +28,4 @@ RUN git -C TwitchDropsMiner pull || git clone $TDM_REPO TwitchDropsMiner
 RUN pip3 list
 
 RUN pip3 install -r TwitchDropsMiner/requirements.txt
-ENTRYPOINT ["./host/docker-init.sh"]
+ENTRYPOINT ["/init.sh"]

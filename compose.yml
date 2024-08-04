@@ -20,12 +20,18 @@ services:
         
         volumes:
             - repo:/app/TwitchDropsMiner/
-            - ./:/app/host/
+            - ./scripts/init.sh:/init.sh
         
-        #command: bash ./host/docker-init.sh
-
         environment:
             VNCPASS:
             TDM_REPO:
-
+    
+    restarter:
+        container_name: docker-tdm-restarter
+        image: docker:cli
+        volumes: 
+            - /var/run/docker.sock:/var/run/docker.sock
+            - ./scripts/restarter.sh:/restarter.sh
+        entrypoint: "/restarter.sh"
+        restart: always
 
