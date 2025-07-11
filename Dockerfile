@@ -18,7 +18,6 @@ RUN apt install fluxbox -y
 RUN apt install x11-xserver-utils -y
 RUN apt install xdotool wmctrl -y
 
-# meson requirements
 RUN apt install python3-setuptools -y
 RUN apt install python3-wheel -y
 RUN apt install ninja-build -y
